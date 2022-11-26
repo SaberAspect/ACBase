@@ -12,9 +12,6 @@ DWORD WINAPI HackThread(HMODULE hModule)
 	AllocConsole();
 	FILE* f;
 	freopen_s(&f, "CONOUT$", "w", stdout);
-	/**************************************
-
-	**************************************/
 
 	//Initilize our hack manager
 	HackManager* hackManager = new HackManager();
@@ -26,7 +23,6 @@ DWORD WINAPI HackThread(HMODULE hModule)
 		if (doHack)
 			hackManager->updateHacks();
 	}
-
 	fclose(f);
 	FreeConsole();
 	//release our hack
